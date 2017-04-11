@@ -3381,7 +3381,8 @@ CONFIG.C_IS_DUAL {1} \
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x80400000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs tracebuffer_pmods/axi_dma_0/S_AXI_LITE/Reg] SEG_axi_dma_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x80410000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs tracebuffer_arduino/axi_dma_0/S_AXI_LITE/Reg] SEG_axi_dma_0_Reg1
+ if 0{
+ create_bd_addr_seg -range 0x00010000 -offset 0x80410000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs tracebuffer_arduino/axi_dma_0/S_AXI_LITE/Reg] SEG_axi_dma_0_Reg1
   create_bd_addr_seg -range 0x00010000 -offset 0x43C10000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs video/axi_dynclk_0/s00_axi/reg0] SEG_axi_dynclk_0_reg0
   create_bd_addr_seg -range 0x00010000 -offset 0x41220000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs video/axi_gpio_video/S_AXI/Reg] SEG_axi_gpio_video_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43000000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs video/axi_vdma_0/S_AXI_LITE/Reg] SEG_axi_vdma_0_Reg
@@ -3668,7 +3669,7 @@ levelinfo -pg 1 -10 190 570 1010 1500 1980 2480 2860 -top 0 -bot 3100
   save_bd_design
 }
 # End of create_root_design()
-
+}
 
 
 ##################################################################
