@@ -3676,7 +3676,7 @@ levelinfo -pg 1 -10 190 570 1010 1500 1980 2480 2860 -top 0 -bot 3100
 ##################################################################
 
 create_root_design ""
-
+if {0} {
 # Additional steps to get to bitstream
 # generate toplevel wrapper files
 make_wrapper -files [get_files ./base/base.srcs/sources_1/bd/system/system.bd] -top
@@ -3703,5 +3703,5 @@ file copy -force ./base/base.sdk/base.hdf ../../sdk/
 
 # move and rename bitstream to final location
 file copy -force ./base/base.runs/impl_1/top.bit ../../bitstream/base.bit
-
+}
 
